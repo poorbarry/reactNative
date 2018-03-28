@@ -9,18 +9,18 @@ class Counter extends Component {
         this.state = {count: 0};
 
         // Increment the counter every second
-        // setInterval(() => {
-        //     this.setState(previousCount => {
-        //         return {count: previousCount.count + 1};
-        //     });
-        // }, 1000);
+        setInterval(() => {
+            this.setState(previousCount => {
+                return {count: previousCount.count + 1};
+            });
+        }, 1000);
         // setInterval(this.incrementCount(), 1000);
     };
 
-    setState() {
-        this.setState(previousCount => {
-            return {count: previousCount.count + 1};});
-    };
+    // setState() {
+    //     this.setState(previousCount => {
+    //         return {count: previousCount.count + 1};});
+    // };
 
     render() {
         let display = this.state.count;
@@ -35,7 +35,7 @@ export default class App extends Component {
   buttonPressed() {
       // Counter.state.count += 1;
       // Counter.incrementCount();
-      alert('hi');
+      // alert('hi');
   }
 
   render() {
@@ -57,7 +57,7 @@ export default class App extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: 'green',
+      backgroundColor: 'black',
       alignItems: 'center',
       justifyContent: 'center',
     },
